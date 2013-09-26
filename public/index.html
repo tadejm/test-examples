@@ -1,0 +1,112 @@
+<!--
+
+Quipper are creating a site to promote a new product called HyperCube. Currently it's
+looking very bland, grey and not very interactive, so the product manager has asked that:
+
+1. The navbar be styled to match the colour scheme and style of the one at www.quipper.com (Quipper blue is #18bde6)
+2. OpenSans be used as the main font, with nice crisp titles rather than heavy bold ones.
+3. The 4 panels be replaced with some kind of centered carousel. He would especially like if the carousel transitioned with a CSS3 3D cube rotation.
+4. The navbar menu to include 4 links for each of the 4 faces of the carousel.
+
+-->
+    <head>
+        <title>HyperCube</title>
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+        <style>
+            .faces {
+                display: block;
+                margin: 0;
+                padding: 0;
+            }
+            .faces > li {
+                display: block;
+                list-style: none;
+                background: #f0f0f0;
+                padding: 10px;
+                margin-bottom: 10px;
+                float: left;
+                width: 230px;
+                height: 200px;
+                margin-right: 5px;
+            }
+            .faces > li > h2 {
+                font-size: 20px;
+                margin: 0 0 5px 0;
+            }
+
+        </style>
+
+        <link href="./stylesheets/application.css" rel="stylesheet" type="text/css">
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="./javascripts/application.js"></script>
+
+    </head>
+
+    <body>
+
+        <div class="navbar">
+            <a class="navbar-brand" href="#">HyperCube&trade;</a>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/" data-position="0">What is HyperCube&trade;?</a></li>
+                <li><a href="/" data-position="1">Imagine the possibilities</a></li>
+                <li><a href="/" data-position="2">How is it possible?</a></li>
+                <li><a href="/" data-position="3">Is there more?</a></li>
+            </ul>
+        </div>
+
+        <div class="container karousel">
+            <ul class="faces karousel-inner">
+
+                <li class="face" data-position="0">
+                    <h2>What is HyperCube&trade;?</h2>
+                    <p>
+                        The HyperCube&trade; is one of Quipper's most fascinating cube projects,
+                        combining facets of the standard square and cube, while allowing for a
+                        staggering <em>n</em> dimensions!
+                    </p>
+                </li>
+
+                <li class="face" data-position="1">
+                    <h2>Imagine the possibilities!</h2>
+                    <p>
+                        Where the limits of standard cubes end, the endless possibilities of
+                        hypercubes begin! Prepare yourself to step into a whole new dimension.
+                    </p>
+                </li>
+
+                <li class="face" data-position="2">
+                    <h2>How is it possible?</h2>
+                    <p>
+                        Since it is so difficult to imagine an <em>n</em>-dimensional object in a 3D space,
+                        let alone the flat plane of this very website, we will represent hypercubes
+                        as if they were standard cubes.
+                    </p>
+                </li>
+                <li class="face" data-position="3">
+                    <h2>Is there more?</h2>
+                    <p>
+                        If you would like to know more about the incredible benefits of installing
+                        HyperCube&trade; in your Infinite Display System then please call us
+                        for a quote and let's see what we can do for you!
+                    </p>
+                </li>
+            </ul>
+
+            <div class="karousel-navigation">
+                <input type="radio" checked data-position="0" name="face-select"/>
+                <input type="radio" data-position="1" name="face-select"/>
+                <input type="radio" data-position="2" name="face-select"/>
+                <input type="radio" data-position="3" name="face-select"/>
+            </div>
+        </div>
+        <div class="container footer">
+            HyperCube&trade; &mdash; It's like a cube, but <em>Hyper</em>!
+        </div>
+    </body>
+</html>
